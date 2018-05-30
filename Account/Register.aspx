@@ -1,8 +1,8 @@
-﻿<%@ Page Language="C#" Title="Registrarse" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="Store.Account.Register" %>
+﻿<%@ Page Title="Registrate" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="Account_Register" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="row">
+    <div class="row c">
         <div class="col-sm-12">
             <h2>Registrate!</h2><hr />
             <div class="alert alert-info" role="alert">
