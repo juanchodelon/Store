@@ -3,18 +3,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-    public class Producto
-    {
-        String nombre;
-        String tienda;
-        String categoria;
-        String descripcion;
-        String mes;
-        int precio;
-        int existencias;
-        int ventas;
+public class Producto
+{
+    int id;
+    String nombre;
+    String categoria;
+    String descripcion;
+    int precio;
+    int existencias;
+    int ventas;
+    String prop;
 
-        public string Nombre
+    public int Id
+    {
+        get
+        {
+            return id;
+        }
+
+        set
+        {
+            id = value;
+        }
+    }
+    public string Nombre
         {
             get
             {
@@ -26,19 +38,7 @@ using System.Web;
                 nombre = value;
             }
         }
-        public string Tienda
-        {
-            get
-            {
-                return tienda;
-            }
-
-            set
-            {
-                tienda = value;
-            }
-        }
-        public string Categoria
+    public string Categoria
         {
             get
             {
@@ -50,7 +50,7 @@ using System.Web;
                 categoria = value;
             }
         }
-        public string Descripcion
+    public string Descripcion
         {
             get
             {
@@ -62,7 +62,7 @@ using System.Web;
                 descripcion = value;
             }
         }
-        public int Precio
+    public int Precio
         {
             get
             {
@@ -74,7 +74,7 @@ using System.Web;
                 precio = value;
             }
         }
-        public int Existencias
+    public int Existencias
         {
             get
             {
@@ -86,7 +86,7 @@ using System.Web;
                 existencias = value;
             }
         }
-        public int Ventas
+    public int Ventas
         {
             get
             {
@@ -98,4 +98,16 @@ using System.Web;
                 ventas = value;
             }
         }
+    public string Prop
+    {
+        get
+        {
+            return prop;
+        }
+
+        set
+        {
+            prop = value;
+        }
     }
+}

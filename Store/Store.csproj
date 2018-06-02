@@ -162,6 +162,7 @@
     <Content Include="Account\Vendedor.aspx" />
     <Content Include="App_Data\Admins.txt" />
     <Content Include="App_Data\Clientes.txt" />
+    <Content Include="App_Data\db\Productos.txt" />
     <Content Include="App_Data\Usuarios.txt" />
     <Content Include="App_Data\Vendedores.txt" />
     <Content Include="Content\bootstrap.css" />
@@ -307,9 +308,7 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\db\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

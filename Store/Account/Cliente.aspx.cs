@@ -16,6 +16,7 @@ namespace Store.Account
             String filename = Server.MapPath("../App_Data/Clientes.txt");
             FileStream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(stream);
+            int id = Convert.ToInt32(Session["id"]);
 
             while (reader.Peek() > -1)
             {
@@ -30,8 +31,6 @@ namespace Store.Account
             }
             
             reader.Close();
-
-            int id = Convert.ToInt32(Session["id"]);
 
             for (int i = 0; i < cliente.Count; i++)
             {

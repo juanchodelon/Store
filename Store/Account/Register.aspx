@@ -10,8 +10,8 @@
               <span>. Dependiendo que formulario se llene seran almacenados los datos en uno u otro archivo</span>
             </div>
         </div>
-        <!-----vendedor----->
 
+        <!-----vendedor----->
         <div class="col-md-4 offset-md-1 card border-primary">
             <h3>Como Proveedor</h3>
             <div class="form-group">
@@ -42,6 +42,7 @@
                 <asp:Button ID="Vregister" Text="Aceptar" runat="server" CssClass="btn btn-primary" OnClick="Vendedor_Click" />
             </div>
         </div>
+
         <!------cliente----->
         <div class="col-md-4 offset-md-1 card border-primary">
             <h3>Como comprador</h3>
