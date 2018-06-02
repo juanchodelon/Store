@@ -26,7 +26,7 @@
             <div class="form-group">
                  <asp:Button Text="Ingresar" CssClass="btn btn-primary" runat="server" OnClick="Login_Click"/>
             </div>
-
+                <asp:Label Text="" ID="error" CssClass="text-danger control-label" runat="server" />
         </div>
 
         <!----msm----->

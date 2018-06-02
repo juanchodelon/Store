@@ -13,6 +13,8 @@ namespace Store.Account
         List<Usuario> user = new List<Usuario>();
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["id"] = 0;
+
             String filename = Server.MapPath("../App_Data/Usuarios.txt");
             FileStream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(stream);
@@ -35,6 +37,7 @@ namespace Store.Account
             String name = UserName.Text;
             String pass = Password.Text;
             bool n = false, p = false;
+            int tipe = 0, id = 0;
 
             for (int i = 0; i < user.Count; i++)
             {
@@ -42,24 +45,43 @@ namespace Store.Account
                 {
                     n = true;
                 }
+                else{
+                    n = false;
+                }
                 if (pass == user[i].Pass)
                 {
                     p = true;
+                }else
+                {
+                    p = false;
                 }
-            }
 
-            if (n == false)
-            {
-                lblname.Text = "el nombre de usuario no existe o es erroneo";
+                if (n == true && p == true)
+                {
+                    tipe = user[i].Tipe;
+                    id = user[i].ID;
+                    i = user.Count;
+                }
+                
             }
-            if (n == true && p == false)
+            if (n == false || p == false)
             {
-                lblpass.Text = "password incorrecto";
+                error.Text = "nombre de usuario o clave incorrectas!";
             }
             if (n == true && p == true)
             {
-                Session["loged"] = 1;
-                Response.Redirect("~/Account/Vendedor");
+                if (tipe == 0)
+                {
+                    Session["loged"] = 2;
+                    Session["id"] = id;
+                    Response.Redirect("~/Account/Cliente");
+                }
+                else if (tipe == 1)
+                {
+                    Session["loged"] = 1;
+                    Session["id"] = id;
+                    Response.Redirect("~/Account/Vendedor");
+                }
             }
 
         }

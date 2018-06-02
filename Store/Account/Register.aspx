@@ -10,7 +10,7 @@
               <span>. Dependiendo que formulario se llene seran almacenados los datos en uno u otro archivo</span>
             </div>
         </div>
-        <!----r vendedor----->
+        <!-----vendedor----->
 
         <div class="col-md-4 offset-md-1 card border-primary">
             <h3>Como Proveedor</h3>
@@ -28,7 +28,7 @@
             </div>
             <div class="form-group">
                 <label>Contraseña</label>
-                <asp:TextBox runat="server" ID="Pass" CssClass="form-control"/>  
+                <asp:TextBox runat="server" ID="Pass" TextMode="Password" CssClass="form-control"/>  
             </div>
             <div class="form-group">
                 <label>Empresa</label>
@@ -59,7 +59,7 @@
             </div>
             <div class="form-group">
                 <label>Contraseña</label>
-                <asp:TextBox runat="server" ID="CPass" CssClass="form-control" />  
+                <asp:TextBox runat="server" ID="CPass" TextMode="Password" CssClass="form-control" />  
             </div>
             <div class="form-group">
                 <label>Ciudad</label>
