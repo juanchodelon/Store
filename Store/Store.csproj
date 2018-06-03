@@ -162,6 +162,7 @@
     <Content Include="Account\Vendedor.aspx" />
     <Content Include="App_Data\Admins.txt" />
     <Content Include="App_Data\Clientes.txt" />
+    <Content Include="App_Data\db\carrito.txt" />
     <Content Include="App_Data\db\Productos.txt" />
     <Content Include="App_Data\Usuarios.txt" />
     <Content Include="App_Data\Vendedores.txt" />
@@ -265,6 +266,7 @@
       <DependentUpon>Vendedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\carrito.cs" />
     <Compile Include="App_Start\Comprador.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\Producto.cs" />

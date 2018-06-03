@@ -47,14 +47,9 @@
             <!------editar un producto------>
             <div class="col-sm-5 offset-sm-1">
                 <strong>modifica un produto</strong><hr />
-                <div class="row pb-1">
-                    <div class="col-sm-8">
-                        <small>codigo del produto</small> 
-                        <asp:TextBox runat="server" ID="Codigo" CssClass="form-control" /> 
-                    </div>
-                    <div class="col pt-4">
-                        <asp:Button Text="Verificar" CssClass="btn btn-primary" runat="server"/>  
-                    </div>
+                <div class="pb-1">
+                    <small>codigo del produto</small> 
+                    <asp:TextBox runat="server" ID="Codigo" CssClass="form-control" /> 
                 </div>
                 <div class="pb-1">
                     <small>nombre del producto</small>

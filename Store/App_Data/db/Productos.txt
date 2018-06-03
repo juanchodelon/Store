@@ -1,24 +1,24 @@
-8017
-telefono
-Electronicos
-es un smartphone
-300
-4
+5611
+Carro
+Vehiculos
+mazda 3, 2006
+30000
+1
 0
 juan
-8020
-tv
-Electronicos
-es una tv
-4000
-8
+2362
+bateria
+hobbies-arte-musica
+bateria batle
+2000
+3
 0
-alberto
-8087
-carro
-vehiculos
-mazda 2003
-1200
+Carlos
+4661
+Moto
+Vehiculos
+Moto Harley Davidson
+2050
 1
 0
 juan

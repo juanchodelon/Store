@@ -13,8 +13,10 @@ namespace Store.Account
         List<Usuario> user = new List<Usuario>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["id"] = 0;
+            Session["id"] = 0; // variable global que indica si se esta logeado o no
+            Session["user"] = ""; // global que indica el nombre del usuario
 
+            /*****lee los datos del archivo de texto y los almacena en una lista*****/
             String filename = Server.MapPath("../App_Data/Usuarios.txt");
             FileStream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(stream);
@@ -38,42 +40,37 @@ namespace Store.Account
             String pass = Password.Text;
             bool n = false, p = false;
             int tipe = 0, id = 0;
+            String nick = "";
 
             for (int i = 0; i < user.Count; i++)
             {
                 if (name == user[i].Nombre)
-                {
                     n = true;
-                }
-                else{
+                else
                     n = false;
-                }
                 if (pass == user[i].Pass)
-                {
                     p = true;
-                }else
-                {
+                else
                     p = false;
-                }
 
                 if (n == true && p == true)
                 {
                     tipe = user[i].Tipe;
                     id = user[i].ID;
+                    nick = user[i].Nombre;
                     i = user.Count;
                 }
                 
             }
             if (n == false || p == false)
-            {
                 error.Text = "nombre de usuario o clave incorrectas!";
-            }
             if (n == true && p == true)
             {
                 if (tipe == 0)
                 {
                     Session["loged"] = 2;
                     Session["id"] = id;
+                    Session["user"] = nick;
                     Response.Redirect("~/Account/Cliente");
                 }
                 else if (tipe == 1)

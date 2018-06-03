@@ -24,6 +24,7 @@ namespace Store.Account
             String filename = Server.MapPath("../App_Data/Vendedores.txt");
             FileStream stream = new FileStream(filename, FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(stream);
+
             int id = Convert.ToInt32(Session["id"]);
             idprop = id;
 
@@ -86,7 +87,7 @@ namespace Store.Account
                     mio.Precio = productos[i].Precio;
                     mio.Existencias = productos[i].Existencias;
                     mio.Ventas = productos[i].Ventas;
-                    mio.Prop = "mio";
+                    mio.Prop = "yo";
                     mios.Add(mio);
                 }
             }
@@ -131,6 +132,8 @@ namespace Store.Account
             writer.Close();
             pgrid.DataSource = mios;
             pgrid.DataBind();
+            /****refrescar****/
+            Response.Redirect("~/Account/Vendedor");
         }
 
         protected void vender_Click(object sender, EventArgs e)
@@ -150,9 +153,11 @@ namespace Store.Account
             writer.WriteLine(precio.Text);
             writer.WriteLine(existencias.Text);
             writer.WriteLine(0);
-            writer.WriteLine(idprop);
+            writer.WriteLine(name.Text);
 
             writer.Close();
+            /****refrescar****/
+            Response.Redirect("~/Account/Vendedor");
         }
     }
 }

@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-    public class Comprador
-    {
-        /****db*****/
-        String nombre;
-        String password;
-        String ciudad;
-        int id;
-        int nit;
-        int telefono;
+public class Comprador
+{
+    /****db*****/
+    String nombre;
+    String password;
+    String ciudad;
+    int id;
+    int nit;
+    int telefono;
+    int credito;
 
-        public string Nombre
+    public string Nombre
         {
             get
             {
@@ -25,7 +26,7 @@ using System.Web;
                 nombre = value;
             }
         }
-        public string Password
+    public string Password
         {
             get
             {
@@ -37,7 +38,7 @@ using System.Web;
                 password = value;
             }
         }
-        public string Ciudad
+    public string Ciudad
         {
             get
             {
@@ -49,7 +50,7 @@ using System.Web;
                 ciudad = value;
             }
         }
-        public int Nit
+    public int Nit
         {
             get
             {
@@ -61,7 +62,7 @@ using System.Web;
                 nit = value;
             }
         }
-        public int Telefono
+    public int Telefono
         {
             get
             {
@@ -73,7 +74,7 @@ using System.Web;
                 telefono = value;
             }
         }
-        public int Id
+    public int Id
         {
             get
             {
@@ -85,9 +86,21 @@ using System.Web;
                 id = value;
             }
         }
+    public int Credito
+    {
+        get
+        {
+            return credito;
+        }
 
-        /****carrito****/
-        String producto;
+        set
+        {
+            credito = value;
+        }
+    }
+
+    /****carrito****/
+    String producto;
         DateTime fechaventa;
         int cantidad;
         int subtotalxproducto;
@@ -223,4 +236,5 @@ using System.Web;
             }
         }
 
-    }
+    
+}
